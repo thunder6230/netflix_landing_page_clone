@@ -1,0 +1,254 @@
+.site_header {
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0px 0px 300px 109px rgba(0, 0, 0, 1);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: auto;
+}
+
+.header_header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_header img {
+    height: 2.5em;
+}
+
+.header_header .signin_btn {
+    font-size: 1em;
+    font-weight: 550;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.header_main {
+    margin-top: 7.5em;
+    width: 65%;
+    text-align: center;
+}
+
+.header_main h1 {
+    font-size: 3.2em;
+    margin: 0;
+    line-height: 1.1em;
+}
+
+.header_main h2 {
+    font-weight: 400;
+    font-size: 1.7em;
+    margin: 0.5em 0 0.5em;
+}
+
+.header_footer,
+.main_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.header_footer p,
+.main_footer p {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.header_footer > div,
+.main_footer > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_footer .input_form,
+.main_footer .input_form {
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.input_form input {
+    height: 2em;
+    font-size: 1.2em;
+    padding: 0.7em 0.5em 0.2em;
+    width: 100%;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: none;
+    box-shadow: 0 0 1px 1px rgb(143, 143, 143);
+}
+
+.input_form input.error {
+    border-bottom: 2px solid #FFA00A;
+}
+
+.input_form input.error:focus {
+    box-shadow: none;
+}
+
+.input_form input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 1px 1px rgb(0, 47, 255);
+}
+
+.input_form label {
+    position: absolute;
+    color: rgb(138, 135, 135);
+    font-weight: 500;
+    font-size: 0.95em;
+    top: 30%;
+    left: 0.7em;
+    transition: transform 0.1s ease,
+        font-size 0.1s ease;
+}
+
+.input_form button {
+    width: 65%;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input_form button > img {
+    width: 1em !important;
+}
+
+.input_form button:hover {
+    cursor: pointer;
+    background-color: #ff0000;
+}
+
+.input_form button:active {
+    background-color: #ca0000;
+}
+
+.input_form button img {
+    height: 1em;
+}
+
+.input_form.active label {
+    transform: translateY(-70%);
+    font-size: 0.8em;
+}
+
+.input_form .error_message {
+    position: absolute;
+    left: 0;
+    bottom: -1.5em;
+    font-size: 1em;
+    color: #FFA00A;
+    display: none;
+}
+
+.input_form .error_message.active {
+    display: inline;
+}
+
+.header_footer p:last-child {
+    margin-bottom: 8em;
+}
+
+@media only screen and (max-width: 1440px) {
+    .wrapper {
+        width: 90%;
+        margin: auto;
+    }
+    .wrapper .header_footer{
+        width: 60%;
+    }
+    .wrapper .header_main {
+        width: 40%;
+    }
+    .wrapper .header_footer .input_form input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    .wrapper .header_footer {
+        width: 82%;
+    }
+    .wrapper .header_footer
+
+    .wrapper .header_main {
+        width: 60%;
+    }
+
+    .wrapper .header_footer .input_form input {
+        width: 100%;
+    }
+    .input_form button {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .wrapper .header_footer {
+        width: 70%;
+    }
+
+    .wrapper .header_main {
+        width: 65%;
+    }
+    .wrapper .header_footer {
+        padding-bottom: 4em;
+        margin-bottom: 5em;
+    }
+    .wrapper .header_footer p {
+        font-size: 1.4em;
+        text-align: center;
+        margin: 0.3em;
+    }
+    .wrapper .header_footer p:last-child{
+        font-size: 1em;
+    }
+
+    .input_form label {
+        left: 0em;
+        top: 17%;
+    }
+
+    .input_form button {
+        width: 45%;
+        margin-top: 0.5em;
+        font-size: 0.95em;
+    }
+
+    .wrapper .header_footer .input_form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .wrapper .header_footer .input_form input {
+        width: 100%;
+    }   
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper .header_main {
+        width: 80%;
+    }
+
+    .header_footer {
+        width: 75%;
+    }
+}
